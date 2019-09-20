@@ -38,11 +38,6 @@ namespace CoffeeMugApp.Controllers
         [HttpPost]
         public ActionResult<Product> Create(Product product)
         {
-            if (Utils.ValidateName(product.Name))
-            {
-
-            }
-            
             if (Utils.ValidatePrize(product.Prize) && Utils.ValidateName(product.Name))
             {
                 _productService.Create(product);

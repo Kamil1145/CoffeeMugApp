@@ -30,8 +30,6 @@ namespace CoffeeMugApp
             services.Configure<ProductDatabaseSettings>(Configuration.GetSection(nameof(ProductDatabaseSettings)));
             services.AddSingleton<IProductDatabaseSettings>(sp => sp.GetRequiredService<IOptions<ProductDatabaseSettings>>().Value);
             services.AddSingleton<ProductService>();
-            //services.AddScoped<Models.IProductsDatabaseSettings, Models.ProductsDatabaseSettings>();
-            //services.AddScoped<ProductService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

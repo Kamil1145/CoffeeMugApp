@@ -9,6 +9,7 @@ namespace CoffeeMugApp.Services
     {
         private readonly IMongoCollection<Product> _products;
 
+        // dependency injection
         public ProductService(IProductDatabaseSettings settings)
         {
             var client = new MongoClient(settings.ConnectionString);
